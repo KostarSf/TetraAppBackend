@@ -4,6 +4,8 @@ import { SequelizeModule } from '@nestjs/sequelize';
 import { User } from './users/users.model';
 import { UsersModule } from './users/users.module';
 import { ProjectsModule } from './projects/projects.module';
+import { ProjectVariantsModule } from './projects-variants/project-variants.module';
+import { TasksModule } from './tasks/tasks.module';
 
 @Module({
   controllers: [],
@@ -24,6 +26,8 @@ import { ProjectsModule } from './projects/projects.module';
     }),
     UsersModule,
     ProjectsModule,
+    ProjectVariantsModule,
+    TasksModule,
   ],
 })
 export class AppModule {}

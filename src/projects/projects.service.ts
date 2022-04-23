@@ -15,7 +15,9 @@ export class ProjectsService {
   }
 
   async getAll() {
-    const projects = await this.projectRepository.findAll();
+    const projects = await this.projectRepository.findAll({
+      include: { all: true },
+    });
     return projects;
   }
 }
