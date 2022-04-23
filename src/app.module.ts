@@ -6,6 +6,8 @@ import { UsersModule } from './users/users.module';
 import { ProjectsModule } from './projects/projects.module';
 import { ProjectVariantsModule } from './projects-variants/project-variants.module';
 import { TasksModule } from './tasks/tasks.module';
+import { ChecksModule } from './checks/checks.module';
+import { TaskWorkersModule } from './task-workers/task-workers.module';
 
 @Module({
   controllers: [],
@@ -28,6 +30,8 @@ import { TasksModule } from './tasks/tasks.module';
     ProjectsModule,
     ProjectVariantsModule,
     TasksModule,
+    ChecksModule,
+    TaskWorkersModule,
   ],
 })
 export class AppModule {}

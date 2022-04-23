@@ -3,10 +3,12 @@ import {
   Column,
   DataType,
   ForeignKey,
+  HasMany,
   Model,
   Table,
 } from 'sequelize-typescript';
-import { ProjectVariant } from 'src/projects-variants/project-variants.models';
+import { Check } from 'src/checks/checks.model';
+import { ProjectVariant } from 'src/projects-variants/project-variants.model';
 import { User } from 'src/users/users.model';
 
 interface TaskCreationAttrs {
@@ -60,4 +62,7 @@ export class Task extends Model<Task, TaskCreationAttrs> {
 
   @BelongsTo(() => User)
   manager: User;
+
+  @HasMany(() => Check)
+  checks: Check[];
 }

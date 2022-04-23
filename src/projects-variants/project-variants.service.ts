@@ -1,7 +1,7 @@
 import { Injectable } from '@nestjs/common';
 import { InjectModel } from '@nestjs/sequelize';
 import { CreateProjectVariantDto } from './dto/create-project-variant.dto';
-import { ProjectVariant } from './project-variants.models';
+import { ProjectVariant } from './project-variants.model';
 
 @Injectable()
 export class ProjectVariantsService {
