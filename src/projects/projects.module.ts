@@ -3,7 +3,7 @@ import { ProjectsService } from './projects.service';
 import { ProjectsController } from './projects.controller';
 import { SequelizeModule } from '@nestjs/sequelize';
 import { User } from 'src/users/users.model';
-import { Project } from './projects.model';
+import { Project } from './projects.models';
 
 @Module({
   providers: [ProjectsService],

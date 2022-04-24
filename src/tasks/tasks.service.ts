@@ -1,11 +1,15 @@
 import { Injectable } from '@nestjs/common';
 import { InjectModel } from '@nestjs/sequelize';
+import { UsersService } from 'src/users/users.service';
 import { CreateTaskDto } from './dto/create-task.dto';
 import { Task } from './tasks.model';
 
 @Injectable()
 export class TasksService {
-  constructor(@InjectModel(Task) private taskRepository: typeof Task) {}
+  constructor(
+    @InjectModel(Task) private taskRepository: typeof Task,
+    private userService: UsersService,
+  ) {}
 
   async create(dto: CreateTaskDto) {
     const task = await this.taskRepository.create(dto);

@@ -6,7 +6,7 @@ import {
   Model,
   Table,
 } from 'sequelize-typescript';
-import { Project } from 'src/projects/projects.model';
+import { Project } from 'src/projects/projects.models';
 
 interface ProjectVariantCreationAttrs {
   projectId: number;
